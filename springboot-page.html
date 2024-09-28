@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Spring Boot Framework - CODE-GATE</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #6DB33F;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #FF8C00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background-color: #FF7000;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content h2 {
+            color: #6DB33F;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .content p, .content ul {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .content ul {
+            padding-left: 20px;
+        }
+
+        .content ul li {
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #6DB33F;
+            font-family: "Courier New", Courier, monospace;
+            overflow-x: auto;
+        }
+
+        .footer {
+            background-color: #6DB33F;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Welcome to the Spring Boot Framework Course</h1>
+        <p>Learn how to build enterprise-grade applications with Spring Boot</p>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>What You Will Learn</h2>
+        <p>In this Spring Boot Framework course, you'll learn how to quickly and efficiently build enterprise-level applications. Topics include:</p>
+
+        <ul>
+            <li><strong>Spring Boot Basics</strong>: Understanding Spring Boot's auto-configuration, starter dependencies, and creating your first Spring Boot application.</li>
+            <li><strong>Dependency Injection (DI)</strong>: Learn how Spring Boot manages dependencies and how to inject them into your application.</li>
+            <li><strong>RESTful Services</strong>: Building and consuming RESTful APIs with Spring Boot.</li>
+            <li><strong>Spring Data JPA</strong>: Using Spring Boot to interact with databases through Spring Data JPA and Hibernate.</li>
+            <li><strong>Spring Security</strong>: Securing your applications with Spring Security, including authentication and authorization.</li>
+            <li><strong>Testing in Spring Boot</strong>: Unit testing with JUnit and integration testing in Spring Boot.</li>
+            <li><strong>Deploying Spring Boot Applications</strong>: Packaging your applications and deploying them to cloud services like AWS or Heroku.</li>
+        </ul>
+
+        <h2>Sample Spring Boot Code</h2>
+        <p>Below is an example of a simple Spring Boot REST controller:</p>
+        <pre>
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, Spring Boot!";
+    }
+}
+        </pre>
+
+        <h2>Advanced Topics</h2>
+        <p>Once you've mastered the basics, we'll explore advanced Spring Boot topics such as:</p>
+        <ul>
+            <li>Microservices with Spring Cloud: Building distributed systems with Spring Boot.</li>
+            <li>Messaging with RabbitMQ or Kafka: Implementing message-driven architecture.</li>
+            <li>Spring Boot with Docker: Containerizing your applications for better scalability and deployment.</li>
+            <li>Performance Optimization: Tuning Spring Boot applications for better performance.</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Instructor: Abdifatah | Contact: 206-326-8924</p>
+    </div>
+
+</body>
+</html>

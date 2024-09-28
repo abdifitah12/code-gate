@@ -7,66 +7,173 @@ body {
 }
 
 .banner {
-    background-color: #0091EA;
+    background-color: #004D40;
     color: white;
     padding: 20px;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.banner-header img.logo {
-    width: 100px; /* Adjust the logo size */
-    height: auto;
-    margin-bottom: 10px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
+.banner-header h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-header p {
+    font-size: 18px;
+}
+
+.intro-text {
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style the info section */
+.info-section {
+    background-color: #E0F2F1;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section p {
+    margin: 5px 0;
+    color: #004D40;
+    font-size: 16px;
+}
+
+/* Adjust width for skills-row */
 .skills-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the skills */
+    align-items: center;
     margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .skills-row {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between skills */
+    justify-content: space-between;
+    gap: 30px;
     padding: 10px 0;
-    flex-wrap: wrap; /* Make skills responsive */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
 }
 
 .skill {
     background-color: white;
     color: #0091EA;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    width: 150px;
+    width: 120px;
+    height: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .skill img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.footer {
-    background-color: #006064;
-    color: white;
-    padding: 20px;
-    text-align: center;
+.skill img:hover {
+    transform: rotate(360deg);
 }
 
-.footer p, .footer a {
-    margin: 5px 0;
-    color: white;
-    text-decoration: none;
+.skill p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
 }
 
-.footer a:hover {
-    color: #FFD600;
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .skills-row {
+        flex-direction: row; /* Keep them in a row instead of stacking vertically */
+        flex-wrap: wrap;
+        justify-content: center; /* Center content */
+        gap: 20px; /* Reduce space between cards */
+    }
+
+    .skill {
+        width: 90px;
+        height: 130px;
+        padding: 8px;
+    }
+
+    .skill img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skill p {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .banner-header h1 {
+        font-size: 28px;
+    }
+
+    .banner-header p {
+        font-size: 16px;
+    }
+}
+
+/* Additional styles for very small screens (phones) */
+@media (max-width: 480px) {
+    .skills-row {
+        gap: 10px;
+    }
+
+    .skill {
+        width: 80px;
+        height: 110px;
+    }
+
+    .skill img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill p {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+
+    .banner-header h1 {
+        font-size: 24px;
+    }
+
+    .banner-header p {
+        font-size: 14px;
+    }
 }
